@@ -1,10 +1,10 @@
 # Esp32AndRelay4Channels
 Code for Web Application and for ESP32 WiFi/Bluetooth board for controlling remotely a Relay set with 4 channels.
 
-![Web App](WebApp\images\app.png)  
+![Web App](WebApp/images/app.png)  
 Web Application    
 
-![Circuit](WebApp\images\schema.png)  
+![Circuit](WebApp/images/schema.png)  
 Circuit
 
 As initial adjustments, replace the values of the following parameters:
