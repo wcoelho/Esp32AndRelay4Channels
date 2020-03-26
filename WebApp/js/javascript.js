@@ -1,18 +1,17 @@
-ENDPOINT_STATUS_SET = "https://myServer/esp32set";
-ENDPOINT_STATUS_GET = "https://myServer/esp32get";
-ENDPOINT_IP_GET = "https://myServer/esp32ipget";
+ENDPOINT_STATUS = "https://myServer.cloudfunctions.net/esp32";
+ENDPOINT_IP_GET = "https://myServer.cloudfunctions.net/esp32/ip";
 
 function toggleCheckbox(element) {
 	var xhr = new XMLHttpRequest();
-	if(element.checked){ xhr.open("POST", ENDPOINT_STATUS_SET+"?relay="+element.id+"&state=1", true); }
-	else { xhr.open("POST", ENDPOINT_STATUS_SET+"?relay="+element.id+"&state=0", true); }
+	if(element.checked){ xhr.open("POST", ENDPOINT_STATUS+"?relay"+element.id+"=1", true); }
+	else { xhr.open("POST", ENDPOINT_STATUS+"?relay"+element.id+"=0", true); }
 	xhr.send();
 }
 function getStatuses() {
 setTimeout(function () {
   document.getElementById('loading').style.visibility='visible';
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", ENDPOINT_STATUS_GET, true);
+  xhr.open("GET", ENDPOINT_STATUS, true);
   xhr.onload = function () {
 	var response = JSON.parse(xhr.response);
 	var status = [0,0,0,0];
@@ -36,8 +35,7 @@ function getIpValue() {
   var xhr = new XMLHttpRequest();
   xhr.open("GET", ENDPOINT_IP_GET, true);
   xhr.onload = function () {
-	var response = JSON.parse(xhr.response);
-	var ipValue = response["ip"];
+	var ipValue = xhr.response;
 	var input = document.getElementById("ipValue");
 	input.innerHTML = ipValue;
   }
