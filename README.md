@@ -17,4 +17,4 @@ As initial adjustments, replace the values of the following parameters:
     - ENDPOINT_IP_SET - Endpoint that sets the IP assigned to ESP32
 
 ## Instructables:
-https://www.instructables.com/editInstructable/edit/EGNSCTLK7RRBKNZ
+https://www.instructables.com/id/ESP32-E-M%C3%B3dulo-De-Rel%C3%A9s-4-Canais/
