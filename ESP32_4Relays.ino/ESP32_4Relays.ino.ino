@@ -11,9 +11,9 @@ const char* PASSWORD2 = "PWD2";
 
 // Webservice endpoints
 // URL for retrieving relays' statuses
-const char* ENDPOINT_STATUS_GET = "https://myServer/esp32get";
+const char* ENDPOINT_STATUS_GET = "https://myServer.cloudfunctions.net/esp32";
 // URL for sending assigned IP
-const char* ENDPOINT_IP_SET = "https://myServer/esp32ipset";
+const char* ENDPOINT_IP_SET = "https://myServer.cloudfunctions.net/esp32/ip";
 
 // Set number of relays
 #define NUM_RELAYS 4
